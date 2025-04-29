@@ -21,13 +21,13 @@ public class ImageFilters{
 
     public static void main(String[] args) throws IOException{
 
-        String fileNames = "example.png";
+        String fileNames = "miku1.png";
         
         //could prob also do "for(String fileName : args)"
         //but this is easier to just write it above in the IDE
         for(String fileName : fileNames.split(" ")){
             System.out.printf("Processing %s...%n", fileName);
-            File file = getGradient(fileName);
+            File file = getGradient("Images/" + fileName);
             openImage(file);
         }
 
